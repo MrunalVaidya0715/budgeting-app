@@ -27,11 +27,9 @@ const ExpenseItem = ({ expense, showBudget }) => {
       <td>{formatDateToLocaleString(expense.createdAt)}</td>
       {showBudget && (
         <td>
-          <Link
+          <Link  style={{border: "1px", borderColor:"blue", backgroundColor:"transparent", color:"blue", fontWeight:"bold",}}
             to={`/budget/${budget.id}`}
-            style={{
-              "--accent": budget.color,
-            }}
+            
           >
             {budget.name}
           </Link>
