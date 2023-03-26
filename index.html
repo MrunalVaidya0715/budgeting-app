@@ -3,11 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="SpendWise: Budgeting App" />
+    <link rel="apple-touch-icon" href="/icons/apple-icon-180.png" />
+    <link rel="manifest" href="manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Budget</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      if('serviceWorker' in navigator){
+        navigator.serviceWorker.register('./serviceWorker.js').then((res)=>{
+          console.log("Service Worker Registered: ", res.scope)
+        }).catch((err)=>{
+          console.log('Err: ',err)
+        })
+      }
+    </script>
   </body>
 </html>
