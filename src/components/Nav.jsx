@@ -5,18 +5,20 @@ import { Form, NavLink } from "react-router-dom"
 import { TrashIcon } from '@heroicons/react/24/solid'
 
 // assets
-import logomark from "../assets/logomark.svg"
+import {VscGraph} from 'react-icons/vsc'
+import {ImUser} from 'react-icons/im'
 
 const Nav = ({ userName }) => {
   return (
-    <nav>
+    <nav  style={{backgroundColor: 'transparent',  zIndex: '100', backdropFilter:'blur(350px)'}}>
       <NavLink
         to="/"
         aria-label="Go to home"
       >
-        <img src={logomark} alt="" height={30} />
-        <span>HomeBudget</span>
+        <VscGraph style={{color: 'blueviolet'}}/>
+        <span style={{letterSpacing: '0.05em'}}>SpendWise</span>
       </NavLink>
+      
       {
         userName && (
           <Form
@@ -30,7 +32,7 @@ const Nav = ({ userName }) => {
           >
             <button type="submit" className="btn btn--warning">
               <span>Delete User</span>
-              <TrashIcon width={20} />
+              <ImUser/>
             </button>
 
           </Form>

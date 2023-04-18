@@ -12,19 +12,19 @@ const Error = () => {
       <h1>Uh oh! We’ve got a problem.</h1>
       <p>{error.message || error.statusText}</p>
       <div className="flex-md">
-        <button
+        {/* <button
           className="btn btn--dark"
           onClick={() => navigate(-1)}
         >
           <ArrowUturnLeftIcon width={20} />
           <span>Go Back</span>
-        </button>
+        </button> */}
         <Link
           to="/"
           className="btn btn--dark"
         >
           <HomeIcon width={20} />
-          <span>Go home</span>
+          <span>Take me home</span>
         </Link>
       </div>
     </div>

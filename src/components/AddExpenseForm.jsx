@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react"
 import { useFetcher } from "react-router-dom"
 
 // library imports
-import { PlusCircleIcon } from "@heroicons/react/24/solid"
+import { AiOutlinePlus} from "react-icons/ai"
 
 const AddExpenseForm = ({ budgets }) => {
   const fetcher = useFetcher()
@@ -43,7 +43,7 @@ const AddExpenseForm = ({ budgets }) => {
               type="text"
               name="newExpense"
               id="newExpense"
-              placeholder="e.g., Coffee"
+              placeholder="e.g: Rent"
               ref={focusRef}
               required
             />
@@ -56,7 +56,7 @@ const AddExpenseForm = ({ budgets }) => {
               inputMode="decimal"
               name="newExpenseAmount"
               id="newExpenseAmount"
-              placeholder="e.g., 3.50"
+              placeholder="e.g: &#8377;5000"
               required
             />
           </div>
@@ -83,7 +83,7 @@ const AddExpenseForm = ({ budgets }) => {
             isSubmitting ? <span>Submitting…</span> : (
               <>
                 <span>Add Expense</span>
-                <PlusCircleIcon width={20} />
+                <AiOutlinePlus size={20} />
               </>
             )
           }

@@ -5,7 +5,8 @@ import { useEffect, useRef } from "react";
 import { Form, useFetcher } from "react-router-dom"
 
 // library imports
-import { CurrencyDollarIcon } from "@heroicons/react/24/solid"
+import {BiRupee} from 'react-icons/bi'
+import { AiOutlinePlus } from "react-icons/ai";
 
 const AddBudgetForm = () => {
   const fetcher = useFetcher();
@@ -37,7 +38,7 @@ const AddBudgetForm = () => {
             type="text"
             name="newBudget"
             id="newBudget"
-            placeholder="e.g., Groceries"
+            placeholder="e.g: Groceries"
             required
             ref={focusRef}
           />
@@ -49,7 +50,7 @@ const AddBudgetForm = () => {
             step="0.01"
             name="newBudgetAmount"
             id="newBudgetAmount"
-            placeholder="e.g., $350"
+            placeholder="e.g: &#8377;350"
             required
             inputMode="decimal"
           />
@@ -60,7 +61,7 @@ const AddBudgetForm = () => {
             isSubmitting ? <span>Submitting…</span> : (
               <>
                 <span>Create budget</span>
-                <CurrencyDollarIcon width={20} />
+                <AiOutlinePlus size={20} />
               </>
             )
           }
